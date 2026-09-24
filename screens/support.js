@@ -81,7 +81,7 @@
   // The splash stays 4.5 seconds, longer if the screen isn't ready yet (8 at most).
   if (splash) {
     const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    Promise.race([Promise.all([wait(4500), window.appReady]), wait(8000)]).then(splash.hide);
+    Promise.race([Promise.all([wait(2500), window.appReady]), wait(8000)]).then(splash.hide);
   }
 
   // ---------------------------------------------------------------- splash
